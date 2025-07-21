@@ -1,9 +1,9 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-// import Greet from './component/Greet';//no need to weight jsx
+import App from './App';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Greet />
+    <App />
   </StrictMode>
 );
