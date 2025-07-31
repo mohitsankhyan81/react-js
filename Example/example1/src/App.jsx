@@ -1,8 +1,9 @@
-import React from 'react'
-
+import Example from "./comp/Example"
 const App = () => {
   return (
-    <div>App</div>
+    <div>
+      <Example/>
+    </div>
   )
 }
 
