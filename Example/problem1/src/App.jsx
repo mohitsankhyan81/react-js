@@ -1,5 +1,6 @@
 import Count from "./comp/Count"
 import Profile from "./comp/Profile"
+import Shopping from "./comp/Shopping"
 import Todolist from "./comp/Todolist"
 const App = () => {
   return (
@@ -7,6 +8,7 @@ const App = () => {
       <Count/>
       <Todolist/>
       <Profile/>
+      <Shopping/>
     </div>
   )
 }
