@@ -1,6 +1,8 @@
-const Popupcontent = () => {
+const Popupcontent = ({copy}) => {
   return (
-    <div>Popupcontent</div>
+    <section>
+      {copy && <div style={{position:"absolute" ,bottom:"3rem"}}>Copy to ClipBoard</div>}
+    </section>
   )
 }
 
