@@ -1,6 +1,10 @@
-const CompA = () => {
+import CompB from "./CompB"
+
+const CompA = ({name}) => {
   return (
-    <div>CompA</div>
+    <div>
+      <CompB name={name}/>
+    </div>
   )
 }
 

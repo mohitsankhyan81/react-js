@@ -1,6 +1,11 @@
+import CompA from "./comp/CompA"
+
 const App = () => {
+  const namw="mohit Sankhyan"
   return (
-    <div>App</div>
+    <div>
+      <CompA name={namw}/>
+    </div>
   )
 }
 

@@ -1,6 +1,8 @@
-const CompC = () => {
+const CompC = ({name}) => {
   return (
-    <div>CompC</div>
+    <div>
+      <h1>{name}</h1>
+    </div>
   )
 }
 
