@@ -1,12 +1,18 @@
-import CompA from "./comp/CompA"
+// import { createContext } from "react";
+// import CompA from "./comp/CompA";
 
-const App = () => {
-  const namw="mohit Sankhyan"
-  return (
-    <div>
-      <CompA name={namw}/>
-    </div>
-  )
-}
+// export const DataContext = createContext();
 
-export default App
+// const App = () => {
+//   const name = "Mohit Sankhyan";
+
+//   return (
+//     <div>
+//       <DataContext.Provider value={name}>
+//         <CompA />
+//       </DataContext.Provider>
+//     </div>
+//   );
+// };
+
+// export default App;

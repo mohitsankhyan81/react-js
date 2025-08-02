@@ -1,9 +1,8 @@
 import CompC from "./CompC"
-
-const CompB = ({name}) => {
+const CompB = () => {
   return (
     <div>
-      <CompC name={name}/>
+      <CompC/>
     </div>
   )
 }

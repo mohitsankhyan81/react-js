@@ -1,9 +1,11 @@
-const CompC = ({name}) => {
-  return (
-    <div>
-      <h1>{name}</h1>
-    </div>
-  )
-}
+import { useContext } from "react";
+import { DataContext } from "../App";
 
-export default CompC
+const CompC = () => {
+  const username=useContext(DataContext)
+  return (
+    <h1>My name is {username}</h1>
+  );
+};
+
+export default CompC;

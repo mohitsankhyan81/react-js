@@ -1,11 +1,11 @@
-import CompB from "./CompB"
+import CompB from "./CompB";
 
-const CompA = ({name}) => {
+const CompA = () => {
   return (
     <div>
-      <CompB name={name}/>
+      <CompB />
     </div>
-  )
-}
+  );
+};
 
-export default CompA
+export default CompA;
