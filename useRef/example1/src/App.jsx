@@ -1,6 +1,12 @@
+import Focusinput from "./comp/Focusinput"
+import Timer from "./comp/Timer"
+
 const App = () => {
   return (
-    <div>App</div>
+    <div>
+      <Focusinput/>
+      <Timer/>
+    </div>
   )
 }
 
