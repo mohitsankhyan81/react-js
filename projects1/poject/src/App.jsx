@@ -1,7 +1,9 @@
+import Todo from "./comp/Todo"
+
 const App = () => {
   return (
     <div>
-      
+      <Todo/>
     </div>
   )
 }
