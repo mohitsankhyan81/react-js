@@ -1,6 +1,10 @@
+import Toglecolor from "./comp/Toglecolor"
+
 const App = () => {
   return (
-    <div>App</div>
+    <div>
+      <Toglecolor/>
+    </div>
   )
 }
 
