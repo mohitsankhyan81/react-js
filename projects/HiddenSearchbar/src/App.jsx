@@ -1,6 +1,10 @@
+import HiddenTaskBar from "./comp/HiddenTaskBar"
+
 const App = () => {
   return (
-    <div>App</div>
+    <div>
+      <HiddenTaskBar/>
+    </div>
   )
 }
 
