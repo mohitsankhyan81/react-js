@@ -1,6 +1,7 @@
 import Nav from "./navigation/Nav";
 import Products from "./Pro/Products";
 import Recommended from "./Recommended/Recommended";
+import './index.css';
 
 function App() {
   return (
