@@ -1,11 +1,10 @@
-.card-container{
-  display: flex;
-  flex-wrap: wrap;
-  margin: 20rem;
-  margin: 2rem;
-  z-index: 2;
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 20px;
+  justify-content: end;
+  margin-top: 2rem;
 }
-
 .card{
   margin: 20px;
   border: 2px solid #ededed;
