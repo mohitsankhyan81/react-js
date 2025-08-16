@@ -3,7 +3,8 @@ import {CiShoppingCart} from 'react-icons/ci'
 import Category from './Category/Category'
 import Price from './Price/Price'
 import Color from './Color/Color'
-function Sidebar() {
+function Sidebar({handleChange}) {
+
   return <>
     <section className='Sidebar'>
       <div className='logo-container'>
@@ -11,9 +12,9 @@ function Sidebar() {
           <CiShoppingCart />
         </h1>
       </div>
-      <Category/>
-      <Price/>
-      <Color/>
+      <Category handleChange={handleChange}/>
+      <Price handleChange={handleChange}/>
+      <Color handleChange={handleChange}/>
     </section>
   </>
 }
