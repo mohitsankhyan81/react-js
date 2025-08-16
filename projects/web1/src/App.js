@@ -6,23 +6,26 @@ import Sidebar from "./SideBar/Sidebar";
 import './index.css';
 //database
 import products from './db/data';
-import Category from "./SideBar/Category/Category";
 import Card from "./components/Card";
 function App() {
   const [selectCategory,setSelectCategory]=useState(null);
-  const [query,setquery]=useState("")
+  const [query,setquery]=useState("");
 
-  const handleInputChanges = event=>{
+  const handleInputChanges = (event)=>{
     setquery(event.target.value)
-  }
+  };
 
-  const filterdItems=products.filter(product=>product.title.toLocaleLowerCase().indexOf(query.toLocaleLowerCase()!== -1))
+const filteredItems = products.filter(
+  (product) => product.title.toLowerCase().indexOf(query.toLowerCase()) !== -1
+);
+
+
 
   //-------Radio Filter---
 
-  const handleChange=event=>{
+  const handleChange=(event)=>{
     setSelectCategory(event.target.value)
-  }
+  };
 
   //button filter----
   const handleClick=event=>{
@@ -30,10 +33,10 @@ function App() {
     }
 
     function filteredData(products,selected,query){
-      let filteredProducts=products
+      let filteredProducts=products;
 
       if(query){
-        filteredProducts=filterdItems
+        filteredProducts=filteredItems;
       }
       if(selected){
         filteredProducts=filteredProducts.filter(({category,color,company,newPrice,title})=>
@@ -61,9 +64,9 @@ function App() {
   return (
     <>
       <Sidebar handleChange={handleChange}/>
-      <Nav />
-      <Recommended/>
-      <Products/>
+      <Nav query={query} handleInputChanges={handleInputChanges}/>
+      <Recommended handleClick={handleClick}/>
+      <Products result={result} />
     </>
   );
 }
