@@ -1,11 +1,10 @@
 import Button from "./comp/Button"
-
-const App = () => {
+const app = () => {
   return (
     <div>
-      <Button label="Submit" onClick={()=>console.log("clicked")} disabled={false}/>
+      <Button label="submit" onClick={()=>console.log("Clicked")} disabled={false}/>
     </div>
   )
 }
 
-export default App
+export default app
