@@ -1,13 +1,19 @@
-type Admininfo={
-  username:string;
-  email:string;
-  age:number;
-  location:string[];
-  admin:string;
-}
+import {type Info} from './Userinfo';
 
 
-const Admininfo = ({username,email,age,location,admin}:Admininfo) => {
+type Admininfolist =Info&{admin:string};
+
+
+// type Admininfo={
+//   username:string;
+//   email:string;
+//   age:number;
+//   location:string[];
+//   admin:string;
+// }
+
+
+const Admininfo = ({username,email,age,location,admin}:Admininfolist) => {
   return (
     <div>
       <li>{username}</li>
