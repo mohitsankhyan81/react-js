@@ -11,6 +11,6 @@ const UserInfo=({user}:Props)=>{
       <p>Email:{user.email}</p>
     </div>
   )
-}
+ }
 
 export default UserInfo
