@@ -1,5 +1,5 @@
 import Button from "./comp/Button"
-const app = () => {
+const App = () => {
   return (
     <div>
       <Button label="submit" onClick={()=>console.log("Clicked")} disabled={false}/>
@@ -7,4 +7,4 @@ const app = () => {
   )
 }
 
-export default app
+export default App
