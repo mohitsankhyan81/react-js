@@ -1,46 +1,46 @@
 import { useRef, useState, type FormEvent } from "react"
-interface fromData{
+
+type info={
   name:string;
   email:string;
   password:string|number;
 }
+
 const Form = () => {
-  const [submitData,setsubmiteddata]=useState<fromData>({
+  const [data,setdata]=useState<info>({
     name:'',
     email:'',
     password:''
   })
-
   const name=useRef<HTMLInputElement>(null);
   const email=useRef<HTMLInputElement>(null);
   const password=useRef<HTMLInputElement>(null);
 
-  const handlesubmit=(event:FormEvent<HTMLFormElement>)=>{
-    event.preventDefault()
+  const submitform=(event:FormEvent<HTMLFormElement>)=>{
+    event.preventDefault();
 
-    const nameValue=name.current!.value;
+    const namevalue=name.current!.value;
     const emailvalue=email.current!.value;
-    const passwordvalue=password.current!.value;
+    const passvalue=password.current!.value;
 
-    setsubmiteddata({
-      name:nameValue,
+    setdata({
+      name:namevalue,
       email:emailvalue,
-      password: passwordvalue
+      password:passvalue
     })
   }
   return (
     <div>
-      <form onSubmit={handlesubmit}>
-      <input type="text" placeholder="Enter your name " ref={name} />
-      <input type="text" placeholder="Enter your email " ref={email} />
-      <input type="password" placeholder="Enter your password" ref={password} />
-      <button type="submit">Submit</button>
-
-      <section>
-        <h1>Name: {submitData.name}</h1>
-        <h1>Email: {submitData.email}</h1>
-        <h1>Password: {submitData.password}</h1>
-      </section>
+      <form onClick={submitform}>
+        <input type="text" placeholder="Enter your name " ref={name} />
+        <input type="text" placeholder="Enter your email " ref={email} />
+        <input type="text" placeholder="Enter password" ref={password}/>
+        <button type="submit">Submit</button>
+        <section>
+        <h4>Name: {data.name}</h4>
+        <h4>Email: {data.email}</h4>
+        <h4>Password: {data.password}</h4>
+        </section>
       </form>
     </div>
   )
