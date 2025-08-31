@@ -1,61 +1,45 @@
 import { useState } from "react"
 
-interface userinfo{
+
+interface info{
   name:string;
   age:number;
   email:string;
 }
 const Userprofile = () => {
-
-  const [profile,setprofile] = useState<userinfo>({
+  const [profile,setprofile]=useState<info>({
     name:'',
     age:0,
-    email:''
-  })
+    email:'',
+  });
 
-  const updatedata=(name:string)=>{
-    setprofile((prev)=>({...prev,name}))
+  const updatename=(name:string)=>{
+    setprofile((prev)=>({...prev,name}));
   }
 
-  const updateage=(age:string)=>{
-    setprofile((prev)=>({...prev,age:+age}))
+  const updateage=(age:number)=>{
+    setprofile((prev)=>({...prev,age:+age}));
   }
 
   const updateEmail=(email:string)=>{
-    setprofile((prev)=>({...prev,email}))
+    setprofile((prev)=>({...prev,email}));
   }
-
   return (
     <div>
-      <h1>Fill this inputs :-</h1>
+      <h1>There is your details -</h1>
 
-      <input
-        type="text"
-        placeholder="Enter Name"
-        value={profile.name}
-        onChange={(e)=>updatedata(e.target.value)}
-      />
+      <input type="text" placeholder="Enter your name" value={profile.name} onChange={(e)=>updatename(e.target.value)}/>
 
-      <input
-        type="text"
-        placeholder="Enter Age"
-        value={profile.age>0?profile.age:''}
-        onChange={(e)=>updateage(e.target.value)}
-      />
+      <input type="number" placeholder="Enter your age" value={profile.age?profile.age:''} onChange={e=>updateage(e.target.value)} />
 
-      <input
-        type="text"
-        placeholder="Enter Email hear"
-        value={profile.email}
-        onChange={(e)=>updateEmail(e.target.value)}
-      />
-
-
-      <h1>Profile data hear:-</h1>
-
-      <p>Name: {profile.name}</p>
-      <p>Age: {profile.age}</p>
-      <p>Email: {profile.email}</p>
+      <input type="emial" placeholder="Enter your email" value={profile.email} onChange={e=>updateEmail(e.target.value)} />
+      
+      <section>
+        <h1>Your Details</h1>
+        <h4>Name: {profile.name}</h4>
+        <h4>Age: {profile.age}</h4>
+        <h4>Email: {profile.email}</h4>
+      </section>
     </div>
   )
 }
