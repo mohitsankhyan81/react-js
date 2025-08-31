@@ -1,14 +1,16 @@
 import { useRef } from "react"
+
 const FoucusInput = () => {
   const inputref=useRef<HTMLInputElement>(null);
 
-  const focusMe=()=>{
-    inputref.current?.focus();
+  const handlefocus=()=>{
+    inputref.current!.focus();
   }
   return (
     <div>
-      <input type="text" ref={inputref} placeholder="Click Button to focus me" />
-      <button onClick={focusMe}>Focus</button>
+      <input type="text" placeholder="Click on button to focus" ref={inputref}/>
+
+      <button onClick={handlefocus}>Focus</button>
     </div>
   )
 }
