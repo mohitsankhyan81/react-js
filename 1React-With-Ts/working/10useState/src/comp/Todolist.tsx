@@ -1,32 +1,33 @@
 import { useState } from "react"
 
-interface todo{
+
+interface info{
   id:number;
   task:string;
   completed:boolean;
 }
-
 const Todolist = () => {
-  const [todos,settodos]=useState<todo[]>([]);
+  const [todo,settodo]=useState<info[]>([]);
 
-  const Addtodos=(task:string)=>{
-    const newtodo:todo={
-      id:todos.length+1,
+  const addtodos=(task:string)=>{
+    const newtodo:info={
+      id:todo.length+1,
       task,
-      completed:false,
+      completed:false
     }
-    settodos(prevTodo=>[...prevTodo,newtodo]);
+    settodo(prev=>[...prev,newtodo]);
   }
   return (
     <div>
-      <h2>Todo list</h2>
-      <button onClick={()=>Addtodos('new Todo')}>Add Todo</button>
+      <h1>
+        Toto list
+      </h1>
+      <button onClick={()=>addtodos('clicked')}>Click</button>
 
       <ul>
-        {todos.map(todo=>(
-          <li key={todo.id}>{todo.task} {todo.completed?'(Completed)':''}</li>
+        {todo.map(todo=>(
+          <li key={todo.id}>{todo.task}{todo.completed?('completed'):''}</li>
         ))}
-
       </ul>
     </div>
   )
