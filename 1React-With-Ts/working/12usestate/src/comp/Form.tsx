@@ -1,47 +1,49 @@
 import { useRef, useState, type FormEvent } from "react"
 
-type info={
+interface info{
   name:string;
   email:string;
   password:string|number;
 }
-
 const Form = () => {
-  const [data,setdata]=useState<info>({
+  const [form,setform]=useState<info>({
     name:'',
     email:'',
     password:''
-  })
+  });
+
   const name=useRef<HTMLInputElement>(null);
   const email=useRef<HTMLInputElement>(null);
   const password=useRef<HTMLInputElement>(null);
 
-  const submitform=(event:FormEvent<HTMLFormElement>)=>{
+  const handlesubmit=(event:FormEvent<HTMLFormElement>)=>{
     event.preventDefault();
-
     const namevalue=name.current!.value;
     const emailvalue=email.current!.value;
-    const passvalue=password.current!.value;
+    const passwordvalue=password.current!.value;
 
-    setdata({
+    setform({
       name:namevalue,
       email:emailvalue,
-      password:passvalue
+      password:passwordvalue
     })
   }
   return (
     <div>
-      <form onClick={submitform}>
-        <input type="text" placeholder="Enter your name " ref={name} />
-        <input type="text" placeholder="Enter your email " ref={email} />
-        <input type="text" placeholder="Enter password" ref={password}/>
-        <button type="submit">Submit</button>
-        <section>
-        <h4>Name: {data.name}</h4>
-        <h4>Email: {data.email}</h4>
-        <h4>Password: {data.password}</h4>
-        </section>
+      <h1>Here is your details: </h1>
+
+      <form onSubmit={handlesubmit}>
+        <input type="text" placeholder="Enter your Name" ref={name} />
+        <input type="email" placeholder="Enter your Email" ref={email}/>
+        <input type="password" placeholder="Enter your password" ref={password} />
+        <input type="submit" />
       </form>
+      <section>
+        <h1>here is your details</h1>
+        <h4>Name: {form.name}</h4>
+        <h4>Email: {form.email}</h4>
+        <h4>Password: {form.password}</h4>
+      </section>
     </div>
   )
 }
