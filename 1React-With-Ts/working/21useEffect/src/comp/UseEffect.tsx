@@ -5,15 +5,15 @@ interface User{
   name:string;
   username:string;
   email:string;
-  phone:string;
+  phone:number;
 }
 const UseEffect = () => {
   const [users,setusers]=useState<User[]>([]);
   const [loading,setloading]=useState<boolean>(true);
-  const [error,seterror]=useState<string|null|number>(null)
+  const [error,seterror]=useState<string|null|number>(null);
 
   useEffect(()=>{
-    const fetchUsers=async()=>{
+    const fetchuser=async()=>{
       try{
         const response=await fetch("https://jsonplaceholder.typicode.com/users")
         if(!response.ok){
@@ -23,34 +23,39 @@ const UseEffect = () => {
         setusers(data);
       }
       catch(error){
-        seterror(error instanceof Error? error.message:"An error accor")
+        seterror(error instanceof Error?error.message:"An error accor");
       }
       finally{
         setloading(false);
       }
     }
-    fetchUsers();
-  },[]);
+    fetchuser();
+  })
 
-  if(loading)return<>loading...</>
-  if(error)return <>Error: {error}</>
+  if(error)return<><h1>error {error}</h1></>
+  if(loading)return <><h1>Loading...</h1></>
+
   return (
     <div>
-      <tr>
+      <thead>
+        <tr>
         <th>Name</th>
-        <th>UserName</th>
+        <th>Username</th>
         <th>Email</th>
         <th>Phone</th>
       </tr>
-      {users.map(user=>(
-        <tr key={user.id}>
-          <td>{user.id}</td>
-          <td>{user.name}</td>
-          <td>{user.username}</td>
-          <td>{user.email}</td>
-          <td>{user.phone}</td>
-        </tr>
-      ))}
+      </thead>
+      <tbody>
+        {users.map(user=>(
+          <tr key={user.id}>
+            <td>{user.id}</td>
+            <td>{user.name}</td>
+            <td>{user.username}</td>
+            <td>{user.email}</td>
+            <td>{user.phone}</td>
+          </tr>
+        ))}
+      </tbody>
     </div>
   )
 }
