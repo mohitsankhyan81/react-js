@@ -1,12 +1,12 @@
 import { useRef, useState, type FormEvent } from "react"
 
-interface info{
+type info={
   name:string;
   email:string;
-  password:string|number;
+  password:string;
 }
 const Form = () => {
-  const [form,setform]=useState<info>({
+  const [data,setdata] = useState<info>({
     name:'',
     email:'',
     password:''
@@ -16,33 +16,35 @@ const Form = () => {
   const email=useRef<HTMLInputElement>(null);
   const password=useRef<HTMLInputElement>(null);
 
-  const handlesubmit=(event:FormEvent<HTMLFormElement>)=>{
-    event.preventDefault();
-    const namevalue=name.current!.value;
-    const emailvalue=email.current!.value;
-    const passwordvalue=password.current!.value;
 
-    setform({
-      name:namevalue,
-      email:emailvalue,
-      password:passwordvalue
+  const handleSubmit=(event:FormEvent<HTMLFormElement>)=>{
+    event.preventDefault();
+
+    const nameval=name.current!.value;
+    const emailval=name.current!.value;
+    const passwordval=name.current!.value;
+
+    setdata({
+      name:nameval,
+      email:emailval,
+      password:passwordval
     })
   }
   return (
     <div>
-      <h1>Here is your details: </h1>
-
-      <form onSubmit={handlesubmit}>
-        <input type="text" placeholder="Enter your Name" ref={name} />
-        <input type="email" placeholder="Enter your Email" ref={email}/>
-        <input type="password" placeholder="Enter your password" ref={password} />
+      <form onSubmit={handleSubmit}>
+        <input type="text" placeholder="Enter the name" ref={name}/>
+        <input type="text" placeholder="Enter the email" ref={email} />
+        <input type="text" placeholder="enter your password" ref={password}/>
         <input type="submit" />
       </form>
       <section>
-        <h1>here is your details</h1>
-        <h4>Name: {form.name}</h4>
-        <h4>Email: {form.email}</h4>
-        <h4>Password: {form.password}</h4>
+        <h1>
+          Enter your details
+        </h1>
+        <h4>Name: {data.name}</h4>
+        <h4>Email: {data.email}</h4>
+        <h4>Password {data.email}</h4>
       </section>
     </div>
   )
