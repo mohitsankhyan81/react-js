@@ -17,6 +17,7 @@ const Todolist = () => {
     }
     settodo(prev=>[...prev,newtodo]);
   }
+  
   return (
     <div>
       <h1>
