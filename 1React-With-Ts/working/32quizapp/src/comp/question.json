@@ -1,0 +1,92 @@
+[
+  {
+    "question": "What is the largest planet in our solar system",
+    "answerOptions": [
+      {"text": "Saturen", "isCorrect": false},
+      {"text": "Mars", "isCorrect": false},
+      {"text": "Earth", "isCorrect": false},
+      {"text": "Jupiter", "isCorrect": true}
+    ]
+  },
+  {
+    "question": "Which gas do plants absorb from the atmosphere?",
+    "answerOptions": [
+      {"text": "Oxygen", "isCorrect": false},
+      {"text": "Carbon Dioxide", "isCorrect": true},
+      {"text": "Nitrogen", "isCorrect": false},
+      {"text": "Hydrogen", "isCorrect": false}
+    ]
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "answerOptions": [
+      {"text": "Isaac Newton", "isCorrect": false},
+      {"text": "Albert Einstein", "isCorrect": true},
+      {"text": "Galileo Galilei", "isCorrect": false},
+      {"text": "Nikola Tesla", "isCorrect": false}
+    ]
+  },
+  {
+    "question": "What is the capital city of France?",
+    "answerOptions": [
+      {"text": "London", "isCorrect": false},
+      {"text": "Berlin", "isCorrect": false},
+      {"text": "Paris", "isCorrect": true},
+      {"text": "Madrid", "isCorrect": false}
+    ]
+  },
+  {
+    "question": "Which organ pumps blood in the human body?",
+    "answerOptions": [
+      {"text": "Lungs", "isCorrect": false},
+      {"text": "Kidney", "isCorrect": false},
+      {"text": "Brain", "isCorrect": false},
+      {"text": "Heart", "isCorrect": true}
+    ]
+  },
+  {
+    "question": "Which is the smallest prime number?",
+    "answerOptions": [
+      {"text": "1", "isCorrect": false},
+      {"text": "2", "isCorrect": true},
+      {"text": "3", "isCorrect": false},
+      {"text": "5", "isCorrect": false}
+    ]
+  },
+  {
+    "question": "Which continent is known as the 'Dark Continent'?",
+    "answerOptions": [
+      {"text": "Asia", "isCorrect": false},
+      {"text": "Africa", "isCorrect": true},
+      {"text": "Europe", "isCorrect": false},
+      {"text": "Australia", "isCorrect": false}
+    ]
+  },
+  {
+    "question": "Which is the fastest land animal?",
+    "answerOptions": [
+      {"text": "Lion", "isCorrect": false},
+      {"text": "Cheetah", "isCorrect": true},
+      {"text": "Horse", "isCorrect": false},
+      {"text": "Tiger", "isCorrect": false}
+    ]
+  },
+  {
+    "question": "Which element has the chemical symbol 'O'?",
+    "answerOptions": [
+      {"text": "Osmium", "isCorrect": false},
+      {"text": "Oxygen", "isCorrect": true},
+      {"text": "Gold", "isCorrect": false},
+      {"text": "Silver", "isCorrect": false}
+    ]
+  },
+  {
+    "question": "Who is known as the 'Father of Computers'?",
+    "answerOptions": [
+      {"text": "Charles Babbage", "isCorrect": true},
+      {"text": "Alan Turing", "isCorrect": false},
+      {"text": "Bill Gates", "isCorrect": false},
+      {"text": "Steve Jobs", "isCorrect": false}
+    ]
+  }
+]
